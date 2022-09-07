@@ -6,10 +6,12 @@
 
     <groupId>com.liufei.mall</groupId>
     <artifactId>mall-learning</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <modules>
         <module>mall-tiny-01</module>
+        <module>mall-tiny-02</module>
     </modules>
 
     <parent>
