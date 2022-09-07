@@ -6,10 +6,10 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
 @MapperScan("com.liufei.mall.tiny.dao")
-public class MallTiny01Application {
+public class MallApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MallTiny01Application.class, args);
+        SpringApplication.run(MallApplication.class, args);
     }
 
 }
