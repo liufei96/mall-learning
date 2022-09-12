@@ -13,6 +13,7 @@
         <module>mall-tiny-01</module>
         <module>mall-tiny-02</module>
         <module>mall-tiny-03</module>
+        <module>mall-tiny-04</module>
     </modules>
 
     <parent>
