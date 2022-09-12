@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.liufei.mall.tiny.dao.UmsAdminRoleRelationMapperV2">
-    <select id="getPermissionList" resultMap="com.liufei.mall.seed.dao.UmsAdminRoleRelationMapperV1.BaseResultMap">
+    <select id="getPermissionList" resultMap="com.liufei.mall.seed.dao.UmsPermissionMapperV1.BaseResultMap">
         SELECT
             p.*
         FROM
