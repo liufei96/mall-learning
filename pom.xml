@@ -14,6 +14,7 @@
         <module>mall-tiny-02</module>
         <module>mall-tiny-03</module>
         <module>mall-tiny-04</module>
+        <module>mall-tiny-05</module>
     </modules>
 
     <parent>
