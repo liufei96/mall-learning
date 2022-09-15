@@ -17,6 +17,7 @@
         <module>mall-tiny-05</module>
         <module>mall-tiny-06</module>
         <module>mall-tiny-07</module>
+        <module>mall-tiny-aop</module>
     </modules>
 
     <parent>
