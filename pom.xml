@@ -21,6 +21,7 @@
         <module>mall-tiny-apm</module>
         <module>mall-tiny-arthas</module>
         <module>mall-tiny-arthas2</module>
+        <module>mall-tiny-devtools</module>
     </modules>
 
     <parent>
