@@ -19,6 +19,7 @@
         <module>mall-tiny-07</module>
         <module>mall-tiny-aop</module>
         <module>mall-tiny-apm</module>
+        <module>mall-tiny-arthas</module>
     </modules>
 
     <parent>
@@ -124,5 +125,14 @@
             <version>4.5.7</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
