@@ -20,6 +20,7 @@
         <module>mall-tiny-aop</module>
         <module>mall-tiny-apm</module>
         <module>mall-tiny-arthas</module>
+        <module>mall-tiny-arthas2</module>
     </modules>
 
     <parent>

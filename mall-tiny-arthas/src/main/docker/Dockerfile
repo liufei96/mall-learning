@@ -7,4 +7,4 @@ EXPOSE 8088
 # 指定docker容器启动时运行jar包
 ENTRYPOINT ["java", "-jar","/mall-tiny-arthas-1.0.jar"]
 # 指定维护者的名字
-MAINTAINER macro
+MAINTAINER liufei
