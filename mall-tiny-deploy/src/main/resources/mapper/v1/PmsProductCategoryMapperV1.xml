@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liufei.mall.seed.dao.PmsProductCategoryMapperV1">
+  <resultMap id="BaseResultMap" type="com.liufei.mall.seed.model.PmsProductCategoryDOV1">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="parent_id" jdbcType="BIGINT" property="parentId" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="level" jdbcType="INTEGER" property="level" />
+    <result column="product_count" jdbcType="INTEGER" property="productCount" />
+    <result column="product_unit" jdbcType="VARCHAR" property="productUnit" />
+    <result column="nav_status" jdbcType="INTEGER" property="navStatus" />
+    <result column="show_status" jdbcType="INTEGER" property="showStatus" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+    <result column="keywords" jdbcType="VARCHAR" property="keywords" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="is_deleted" jdbcType="TINYINT" property="deleted" />
+    <result column="description" jdbcType="LONGVARCHAR" property="description" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liufei.mall.seed.dao.UmsMemberLevelMapperV1">
+  <resultMap id="BaseResultMap" type="com.liufei.mall.seed.model.UmsMemberLevelDOV1">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="growth_point" jdbcType="INTEGER" property="growthPoint" />
+    <result column="default_status" jdbcType="INTEGER" property="defaultStatus" />
+    <result column="free_freight_point" jdbcType="DECIMAL" property="freeFreightPoint" />
+    <result column="comment_growth_point" jdbcType="INTEGER" property="commentGrowthPoint" />
+    <result column="privilege_free_freight" jdbcType="INTEGER" property="privilegeFreeFreight" />
+    <result column="privilege_sign_in" jdbcType="INTEGER" property="privilegeSignIn" />
+    <result column="privilege_comment" jdbcType="INTEGER" property="privilegeComment" />
+    <result column="privilege_promotion" jdbcType="INTEGER" property="privilegePromotion" />
+    <result column="privilege_member_price" jdbcType="INTEGER" property="privilegeMemberPrice" />
+    <result column="privilege_birthday" jdbcType="INTEGER" property="privilegeBirthday" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="is_deleted" jdbcType="TINYINT" property="deleted" />
+  </resultMap>
+</mapper>

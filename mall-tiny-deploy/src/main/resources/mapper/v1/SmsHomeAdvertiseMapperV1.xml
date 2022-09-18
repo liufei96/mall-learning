@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liufei.mall.seed.dao.SmsHomeAdvertiseMapperV1">
+  <resultMap id="BaseResultMap" type="com.liufei.mall.seed.model.SmsHomeAdvertiseDOV1">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="start_time" jdbcType="TIMESTAMP" property="startTime" />
+    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="click_count" jdbcType="INTEGER" property="clickCount" />
+    <result column="order_count" jdbcType="INTEGER" property="orderCount" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="is_deleted" jdbcType="TINYINT" property="deleted" />
+  </resultMap>
+</mapper>

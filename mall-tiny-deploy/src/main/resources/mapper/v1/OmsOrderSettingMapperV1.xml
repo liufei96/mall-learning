@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liufei.mall.seed.dao.OmsOrderSettingMapperV1">
+  <resultMap id="BaseResultMap" type="com.liufei.mall.seed.model.OmsOrderSettingDOV1">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="flash_order_overtime" jdbcType="INTEGER" property="flashOrderOvertime" />
+    <result column="normal_order_overtime" jdbcType="INTEGER" property="normalOrderOvertime" />
+    <result column="confirm_overtime" jdbcType="INTEGER" property="confirmOvertime" />
+    <result column="finish_overtime" jdbcType="INTEGER" property="finishOvertime" />
+    <result column="comment_overtime" jdbcType="INTEGER" property="commentOvertime" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="is_deleted" jdbcType="TINYINT" property="deleted" />
+  </resultMap>
+</mapper>
