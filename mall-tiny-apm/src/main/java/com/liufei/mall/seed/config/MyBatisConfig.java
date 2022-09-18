@@ -27,7 +27,7 @@ import java.util.Properties;
 public class MyBatisConfig {
 
 
-    @Bean
+    @Bean("sqlSessionFactoryBean")
     public SqlSessionFactoryBean createSqlSessionFactory(DataSource dataSource) throws IOException {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dataSource);
