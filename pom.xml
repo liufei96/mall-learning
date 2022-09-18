@@ -24,6 +24,7 @@
         <module>mall-tiny-devtools</module>
         <module>mall-tiny-hutool</module>
         <module>mall-tiny-undertow</module>
+        <module>mall-tiny-delay</module>
     </modules>
 
     <parent>
