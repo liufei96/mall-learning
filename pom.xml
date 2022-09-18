@@ -23,6 +23,7 @@
         <module>mall-tiny-arthas2</module>
         <module>mall-tiny-devtools</module>
         <module>mall-tiny-hutool</module>
+        <module>mall-tiny-undertow</module>
     </modules>
 
     <parent>
