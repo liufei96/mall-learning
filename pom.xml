@@ -26,6 +26,7 @@
         <module>mall-tiny-undertow</module>
         <module>mall-tiny-delay</module>
         <module>mall-tiny-deploy</module>
+        <module>mall-tiny-docker-compose</module>
     </modules>
 
     <parent>
