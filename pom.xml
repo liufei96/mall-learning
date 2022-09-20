@@ -27,6 +27,8 @@
         <module>mall-tiny-delay</module>
         <module>mall-tiny-deploy</module>
         <module>mall-tiny-docker-compose</module>
+        <module>mall-tiny-dynamic-sql</module>
+        <module>mall-tiny-elasticsearch</module>
     </modules>
 
     <parent>
