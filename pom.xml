@@ -29,6 +29,7 @@
         <module>mall-tiny-docker-compose</module>
         <module>mall-tiny-dynamic-sql</module>
         <module>mall-tiny-elasticsearch</module>
+        <module>mall-tiny-elk</module>
     </modules>
 
     <parent>
