@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>mall-learning</artifactId>
+        <groupId>com.liufei.mall</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mall-tiny-jenkins</artifactId>
+    <version>1.0</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!-- 启动主类-->
+                    <mainClass>com.liufei.mall.MallApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.1.0</version>
+                <executions>
+                    <execution>
+                        <id>build-image</id>     <!--定义一个执行命令的id-->
+                        <phase>package</phase>   <!--绑定mvn的哪个命令-->
+                        <goals>
+                            <goal>build</goal>   <!--要执行的命令 -->
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!--仓库地址-->
+                    <registryUrl>192.168.245.132:5000</registryUrl>
+                    <!--docker api地址，构建镜像是通过api调用在192.168.245.133上构建，并推送到registryUrl上-->
+                    <dockerHost>http://192.168.245.132:2375</dockerHost>
+                    <!--镜像名称-->
+                    <imageName>192.168.245.132:5000/mall-tiny/${project.name}:${project.version}</imageName>
+                    <imageTags>
+                        <imageTag>${project.version}</imageTag>
+                    </imageTags>
+                    <!--基础镜像-->
+                    <baseImage>java</baseImage>
+                    <!--是否推送镜像-->
+                    <pushImage>true</pushImage>
+                    <!--推送后是否覆盖已存在的标签镜像-->
+                    <forceTags>true</forceTags>
+                    <exposes>8088</exposes>
+                    <!--资源，类似Dockerfile里的 ADD -->
+                    <resources>
+                        <resource>
+                            <targetPath>/</targetPath>
+                            <directory>${project.build.directory}</directory>
+                            <include>${project.build.finalName}.jar</include>
+                        </resource>
+                    </resources>
+                    <!--启动容器里执行的命令-->
+                    <entryPoint>["java", "-jar","/${project.build.finalName}.jar"]</entryPoint>
+                </configuration>
+                <!--docker-maven-plugin end-->
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
