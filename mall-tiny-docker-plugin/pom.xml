@@ -68,6 +68,15 @@
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.1.0</version>
+                <executions>
+                    <execution>
+                        <id>build-image</id>     <!--定义一个执行命令的id-->
+                        <phase>package</phase>   <!--绑定mvn的哪个命令-->
+                        <goals>
+                            <goal>build</goal>   <!--要执行的命令 -->
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <!--仓库地址-->
                     <registryUrl>192.168.245.133:5000</registryUrl>
