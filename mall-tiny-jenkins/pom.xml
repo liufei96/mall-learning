@@ -50,11 +50,11 @@
                 </executions>
                 <configuration>
                     <!--仓库地址-->
-                    <registryUrl>192.168.245.132:5000</registryUrl>
+                    <registryUrl>192.168.245.133:5000</registryUrl>
                     <!--docker api地址，构建镜像是通过api调用在192.168.245.133上构建，并推送到registryUrl上-->
-                    <dockerHost>http://192.168.245.132:2375</dockerHost>
+                    <dockerHost>http://192.168.245.133:2375</dockerHost>
                     <!--镜像名称-->
-                    <imageName>mall-tiny/${project.name}:${project.version}</imageName>
+                    <imageName>localhost:5000/mall-tiny/${project.name}:${project.version}</imageName>
                     <imageTags>
                         <imageTag>${project.version}</imageTag>
                     </imageTags>

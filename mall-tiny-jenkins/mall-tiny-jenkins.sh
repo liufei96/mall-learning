@@ -7,10 +7,10 @@ echo '----stop container----'
 docker rm ${app_name}
 echo '----rm container----'
 docker run -p 8088:8088 --name ${app_name} \
---net my_mysql_default \
+--net mall-docker-compose_default \
 --link mysql:db \
 -e 'spring.profiles.active'=${profile_active} \
 -v /etc/localtime:/etc/localtime \
 -v /mydata/app/${app_name}/logs:/var/logs \
--d mall-tiny/${app_name}:${version}
+-d localhost:5000/mall-tiny/${app_name}:${version}
 echo '----start container----'
