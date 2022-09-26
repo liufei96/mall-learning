@@ -12,5 +12,5 @@ docker run -p 8088:8088 --name ${app_name} \
 -e 'spring.profiles.active'=${profile_active} \
 -v /etc/localtime:/etc/localtime \
 -v /mydata/app/${app_name}/logs:/var/logs \
--d 192.168.245.132:5000/mall-tiny/${app_name}:${version}
+-d mall-tiny/${app_name}:${version}
 echo '----start container----'
