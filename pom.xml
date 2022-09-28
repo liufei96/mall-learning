@@ -32,6 +32,8 @@
         <module>mall-tiny-elk</module>
         <module>mall-tiny-docker-plugin</module>
         <module>mall-tiny-jenkins</module>
+        <module>mall-tiny-drone</module>
+        <module>mall-tiny-jwt</module>
     </modules>
 
     <parent>
