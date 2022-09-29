@@ -34,6 +34,7 @@
         <module>mall-tiny-jenkins</module>
         <module>mall-tiny-drone</module>
         <module>mall-tiny-jwt</module>
+        <module>mall-tiny-erupt</module>
     </modules>
 
     <parent>
