@@ -36,6 +36,7 @@
         <module>mall-tiny-jwt</module>
         <module>mall-tiny-erupt</module>
         <module>mall-tiny-easypoi</module>
+        <module>mall-tiny-flyway</module>
     </modules>
 
     <parent>
