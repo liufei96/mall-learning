@@ -35,6 +35,7 @@
         <module>mall-tiny-drone</module>
         <module>mall-tiny-jwt</module>
         <module>mall-tiny-erupt</module>
+        <module>mall-tiny-easypoi</module>
     </modules>
 
     <parent>
