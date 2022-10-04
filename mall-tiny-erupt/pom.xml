@@ -17,6 +17,7 @@
     </properties>
 
     <dependencies>
+        <!--  erupt使用文档：https://www.erupt.xyz/#!/doc-->
         <!--用户权限管理-->
         <dependency>
             <groupId>xyz.erupt</groupId>
