@@ -1,0 +1,80 @@
+version: '3'  # https://blog.51cto.com/msiyuetian/2369130
+networks:
+  monitor:
+    driver: bridge
+  my_mysql_default:
+    external: true
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    hostname: prometheus
+    restart: always
+    volumes:
+      - /mydata/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - /mydata/prometheus/node_down.yml:/etc/prometheus/node_down.yml
+    ports:
+      - "9090:9090"
+    networks:
+      - monitor
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: alertmanager
+    hostname: alertmanager
+    restart: always
+    volumes:
+      - /mydata/alertmanager/alertmanager.yml:/etc/alertmanager/alertmanager.yml
+    ports:
+      - "9093:9093"
+    networks:
+      - monitor
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    hostname: grafana
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - monitor
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter
+    hostname: node-exporter
+    restart: always
+    ports:
+      - "9100:9100"
+    networks:
+      - monitor
+  cadvisor:
+    image: google/cadvisor:latest
+    container_name: cadvisor
+    hostname: cadvisor
+    restart: always
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+    ports:
+      - "8888:8080"
+    networks:
+      - monitor
+  mall-tiny-grafana:
+    image: 192.168.245.132:5000/mall-tiny/mall-tiny-grafana:1.0
+    container_name: mall-tiny-grafana
+    hostname: mall-tiny-grafana
+    restart: always
+    external_links:
+      - mysql:db #可以用db这个域名访问mysql服务
+    environment:
+      - spring.profiles.active=qa
+      - TZ="Asia/Shanghai"
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - /mydata/app/mall-tiny-grafana/logs:/var/logs
+    ports:
+      - "8088:8088"
+    networks:
+      - monitor
+      - my_mysql_default

@@ -37,6 +37,7 @@
         <module>mall-tiny-erupt</module>
         <module>mall-tiny-easypoi</module>
         <module>mall-tiny-flyway</module>
+        <module>mall-tiny-grafana</module>
     </modules>
 
     <parent>
